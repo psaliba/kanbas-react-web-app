@@ -1,0 +1,61 @@
+function navSidebar(location) {
+    const links = [
+        {
+            class: "",
+            name: "Account",
+            url: "/Kanbas/Account/Profile/screen.html",
+            iconClass: "fas fa-user-circle",
+            iconExtras: [`style="color:White"`]
+        }, 
+        {
+            class: "wd-active",
+            name: "Dashboard",
+            url: "#",
+            iconClass: "fas fa-tachometer-alt",
+        },
+        {
+            class: "",
+            name: "Courses",
+            url: "/Kanbas/Courses/Home/screen.html",
+            iconClass: "fas fa-book-dead",
+        },
+        {
+            class: "",
+            name: "Calendar",
+            url: "#",
+            iconClass: "fa fa-calendar",
+        },
+        {
+            class: "",
+            name: "Inbox",
+            url: "#",
+            iconClass: "fa fa-inbox",
+        },
+        {
+            class: "",
+            name: "History",
+            url: "#",
+            iconClass: "fa fa-history",
+        },
+        {
+            class: "",
+            name: "Studio",
+            url: "#",
+            iconClass: "fa fa-tv",
+        },
+        {
+            class: "",
+            name: "Commons",
+            url: "#",
+            iconClass: "fa fa-sign-out-alt",
+        }
+    ];
+    document.write(`
+     <ul class="wd-kanbas-navigation">
+     ${links.map((link) => 
+        `<li class=${location === link.name ? "wd-active" : ""}><a href="${link.url}"><i class="${link.iconClass}" ${link.iconExtras?.map((style) => style)}></i> ${link.name} </a></li>`
+     ).join("")
+    }
+    </ul>
+    `);
+}
