@@ -6,7 +6,7 @@ function navSidebar(location) {
             url: "/Kanbas/Account/Profile/screen.html",
             iconClass: "fas fa-user-circle",
             iconExtras: [`style="color:White"`]
-        }, 
+        },
         {
             class: "wd-active",
             name: "Dashboard",
@@ -50,12 +50,101 @@ function navSidebar(location) {
             iconClass: "fa fa-sign-out-alt",
         }
     ];
+
     document.write(`
      <ul class="wd-kanbas-navigation">
-     ${links.map((link) => 
-        `<li class=${location === link.name ? "wd-active" : ""}><a href="${link.url}"><i class="${link.iconClass}" ${link.iconExtras?.map((style) => style)}></i> ${link.name} </a></li>`
-     ).join("")
-    }
+     ${links.map((link) => {
+        if (location === link.name && link.name === "Account") {
+            link.iconExtras = []
+        }
+        return `<li class=${location === link.name ? "wd-active" : ""}><a href="${link.url}"><i class="${link.iconClass}" ${link.iconExtras?.map((style) => style)}></i> ${link.name} </a></li>`
+    }).join("")
+        }
+    </ul>
+    `);
+}
+
+function courseNav(page) {
+    const links = [
+        {
+            name: "Home",
+            url: "/Kanbas/Courses/Home/screen.html"
+        },
+        {
+            name: "Modules",
+            url: "#"
+        },
+        {
+            name: "Piazza",
+            url: "#"
+        },
+        {
+            name: "Zoom Meetings",
+            url: "#"
+        },
+        {
+            name: "Assignments",
+            url: "/Kanbas/Courses/Assignments/screen.html"
+        },
+        {
+            name: "Quizzes",
+            url: "#"
+        },
+        {
+            name: "Grades",
+            url: "/Kanbas/Courses/Grades/screen.html"
+        },
+        {
+            name: "People",
+            url: "#"
+        },
+        {
+            name: "Panopto Video",
+            url: "#"
+        },
+        {
+            name: "Discussions",
+            url: "#"
+        },
+        {
+            name: "Announcements",
+            url: "#"
+        },
+        {
+            name: "Pages",
+            url: "#"
+        },
+        {
+            name: "Files",
+            url: "#"
+        },
+        {
+            name: "Rubrics",
+            url: "#"
+        },
+        {
+            name: "Outcomes",
+            url: "#"
+        },
+        {
+            name: "Collaborations",
+            url: "#"
+        },
+        {
+            name: "Syllabus",
+            url: "#"
+        },
+        {
+            name: "Settings",
+            url: "#"
+        },
+    ];
+    document.write(`
+    <ul class="wd-navigation">
+    ${links.map((link) =>
+        `<li class="${link.name === page ? "wd-active" : "d"}"> <a href="${link.url}"> ${link.name} </a> </li>`
+    ).join("")
+        }
     </ul>
     `);
 }
