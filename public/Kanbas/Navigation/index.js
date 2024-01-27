@@ -10,7 +10,7 @@ function navSidebar(location) {
         {
             class: "wd-active",
             name: "Dashboard",
-            url: "#",
+            url: "/Kanbas/Dashboard/screen.html",
             iconClass: "fas fa-tachometer-alt",
         },
         {
