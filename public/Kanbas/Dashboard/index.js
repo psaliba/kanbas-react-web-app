@@ -69,7 +69,7 @@ function getCourses() {
             style="text-decoration: none; color: navy; font-weight: bold">
             ${course.name}</a>
             <p class="card-text">${course.text}</p>
-            <a html="${course.goLink}" class="btn btn-primary"> Go </a>
+            <a href="${course.goLink}" class="btn btn-primary"> Go </a>
         </div>
 </div>
 </div>`

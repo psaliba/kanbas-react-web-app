@@ -1,95 +1,137 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Kanbas/styles.css" />
-    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
-    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
-    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
-    <script src="/Kanbas/Navigation/index.js">
-    </script>
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/Kanbas/styles.css" />
+  <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+  <script src="/Kanbas/Navigation/index.js">
+  </script>
+  <script src="/libs/bootstrap/bootstrap.min.js">
+  </script>
 </head>
 
 <body>
-    <div class="d-flex">
+
+
+  <nav class="d-md-none navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleCourseNav"
+        aria-controls="navbarToggleCourseNav" aria-expanded="false" aria-label="Toggle course nav">
+        <span class="fa fa-chevron-down"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+
+    <script>navSidebar("Courses")</script>
+  </div>
+
+
+  <div class="collapse" id="navbarToggleCourseNav" data-bs-theme="dark">
+    <script>courseNav("Home")</script>
+  </div>
+
+  <div class="collapse show" id="navbarToggleExternalContent">
+    <div class="collapse show" id="navbarToggleCourseNav">
+      <div class="d-flex">
         <div class="d-none d-md-block">
-            <ul class="wd-kanbas-navigation">
-                <script>navSidebar("Courses")</script>
-            </ul>
+          <ul class="wd-kanbas-navigation">
+            <script>navSidebar("Courses")</script>
+          </ul>
         </div>
         <div class="d-none d-md-block">
-            <ul class="wd-navigation">
-                <script> courseNav("Home")</script>
-            </ul>
+          <ul class="wd-navigation">
+            <script> courseNav("Home")</script>
+          </ul>
         </div>
         <div class="flex-fill">
-            
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-light">Collapse All</button>
+            <button type="button" class="btn btn-light">View Progress</button>
+            <button type="button" class="btn btn-light"> <i class="fa fa-check-circle text-success"></i> Publish
+              All</button>
+            <button type="button" class="btn btn-danger">+ Module</button>
+            <button type="button" class="btn btn-light"><i class="fa fa-ellipsis-v"></i></button>
+
+          </div>
+          <ul class="list-group wd-modules">
             <ul class="list-group wd-modules">
-                <ul class="list-group wd-modules">
-                    <li class="list-group-item">
-                      <div>
-                        <i class="fa fa-ellipsis-v"></i> Week 1
-                        <span class="float-end">
-                          <i class="fa fa-check-circle text-success"></i>
-                          <i class="fa fa-plus ms-2"></i>
-                          <i class="fa fa-ellipsis-v ms-2"></i>
-                        </span>
-                      </div>
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <i class="fa fa-ellipsis-v"></i> Learning Objectives
-                          <span class="float-end">
-                            <i class="fa fa-check-circle text-success"></i>
-                            <i class="fa fa-ellipsis-v ms-2"></i>
-                          </span>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="list-group-item">
-                      <div>
-                        <i class="fa fa-ellipsis-v"></i> Week 2
-                        <span class="float-end">
-                          <i class="fa fa-check-circle text-success"></i>
-                          <i class="fa fa-plus ms-2"></i>
-                          <i class="fa fa-ellipsis-v ms-2"></i>
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+              <li class="list-group-item">
+                <div>
+                  <i class="fa fa-ellipsis-v"></i> Week 1
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </div>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                    <span class="float-end">
+                      <i class="fa fa-check-circle text-success"></i>
+                      <i class="fa fa-ellipsis-v ms-2"></i>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <div>
+                  <i class="fa fa-ellipsis-v"></i> Week 2
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </div>
+              </li>
+            </ul>
         </div>
         <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
-            <h3>Course Status</h3>
-            <button>Unpublish</button>
-            <button>Published</button>
-            <ul>
-                <li>
-                    <a href=""> Import existing content</a>
-                </li>
-                <li>
-                    <a href=""> Import from commons</a>
-                </li>
-                <li>
-                    <a href=""> choose home page</a>
-                </li>
-                <li>
-                    <a href=""> view course stream</a>
-                </li>
-                <li>
-                    <a href=""> new Announcements</a>
-                </li>
-                <li>
-                    <a href=""> view course notifications</a>
-                </li>
-            </ul>
-            <h3> Coming up</h3>
-            <a href="">View Calendar</a>
-            <ul>
-                <li> <a href="">Lect 1</a> </li>
-                <li> <a href="">Lect 2</a> </li>
-                <li> <a href="">Lect 3</a> </li>
-            </ul>        </div>
+          <h3>Course Status</h3>
+          <button>Unpublish</button>
+          <button>Published</button>
+          <ul>
+            <li>
+              <a href=""> Import existing content</a>
+            </li>
+            <li>
+              <a href=""> Import from commons</a>
+            </li>
+            <li>
+              <a href=""> choose home page</a>
+            </li>
+            <li>
+              <a href=""> view course stream</a>
+            </li>
+            <li>
+              <a href=""> new Announcements</a>
+            </li>
+            <li>
+              <a href=""> view course notifications</a>
+            </li>
+          </ul>
+          <h3> Coming up</h3>
+          <a href="">View Calendar</a>
+          <ul>
+            <li> <a href="">Lect 1</a> </li>
+            <li> <a href="">Lect 2</a> </li>
+            <li> <a href="">Lect 3</a> </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
