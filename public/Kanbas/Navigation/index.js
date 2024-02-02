@@ -53,6 +53,9 @@ function navSidebar(location) {
 
     document.write(`
      <ul class="wd-kanbas-navigation">
+     <li>
+     <a href="/Kanbas/Dashboard/screen.html"> <img src="/images/NU.png" height="40" width="40"> </a>
+   </li>
      ${links.map((link) => {
         if (location === link.name && link.name === "Account") {
             link.iconExtras = []

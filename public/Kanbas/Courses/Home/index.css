@@ -44,6 +44,9 @@
     font-size: 1em;
     list-style: none;
 }
+.wd-status-header * {
+  color: red;
+}
 
 .wd-status-text li {
   color: black;
