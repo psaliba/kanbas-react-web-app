@@ -98,35 +98,65 @@
             </ul>
         </div>
         <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
-          <h3>Course Status</h3>
-          <button>Unpublish</button>
-          <button>Published</button>
-          <ul>
+          <h5>Course Status</h5>
+          <button type="button" class="btn btn-light"><i class="fas fa-ban"></i> Unpublish</button>
+          <button type="button" class="btn btn-success" disabled><i class="far fa-check-circle"></i> Published</button>
+          <br><br>
+          <div class="btn-group-vertical gap-2 " role="group">
+            <button type="button" class="btn btn-light"> <i class="fas fa-file-import"></i> Import Existing
+              Content</button>
+            <button type="button" class="btn btn-light"> <i class="fas fa-upload"></i> Import from Commons</button>
+            <button type="button" class="btn btn-light"> <i class="fas fa-bullseye"></i> Choose Home Page</button>
+            <button type="button" class="btn btn-light"> <i class="far fa-chart-bar"></i> View Course Stream</button>
+            <button type="button" class="btn btn-light"> <i class="fas fa-bullhorn"></i> New Announcements</button>
+            <button type="button" class="btn btn-light"> <i class="fas fa-chart-bar"></i> New Analytics</button>
+            <button type="button" class="btn btn-light"> <i class="fas fa-bell"></i> View Course Notifications</button>
+          </div>
+
+          <br><br>
+          <h5>
+            To Do
+          </h5>
+          <hr>
+          <ul class="wd-status-text">
             <li>
-              <a href=""> Import existing content</a>
-            </li>
-            <li>
-              <a href=""> Import from commons</a>
-            </li>
-            <li>
-              <a href=""> choose home page</a>
-            </li>
-            <li>
-              <a href=""> view course stream</a>
-            </li>
-            <li>
-              <a href=""> new Announcements</a>
-            </li>
-            <li>
-              <a href=""> view course notifications</a>
+              <a href="/Kanbas/Courses/Assignments/screen.html">Assignment 1</a>
+              <ul>
+                <li> 100 points, Due July 1</li>
+              </ul>
             </li>
           </ul>
-          <h3> Coming up</h3>
-          <a href="">View Calendar</a>
-          <ul>
-            <li> <a href="">Lect 1</a> </li>
-            <li> <a href="">Lect 2</a> </li>
-            <li> <a href="">Lect 3</a> </li>
+          <br>
+          <div class="row">
+            <div class="col">
+              <h5> Coming up  </h5>
+            </div>
+            <div class="col wd-status-text"> <a  href="#"> <i class="far fa-calendar-alt"></i> View Calendar</a></div>
+            
+          </div>
+         
+         <hr>
+          <ul class="wd-status-text fa-ul">
+            <li> <i class="far fa-calendar-alt"></i> <a href="">Lect 1</a>
+            <ul>
+              <li>
+                CS1234, July 1
+              </li>
+            </ul>
+            </li>
+            
+            <li> <i class="far fa-calendar-alt"></i> <a href="">Lect 2</a>
+              <ul>
+                <li>
+                  CS1234, July 12
+                </li>
+              </ul> </li>
+            <li> <i class="far fa-calendar-alt"></i> <a href="">Lect 3</a>
+              <ul>
+                <li>
+                  CS1234, July 26
+                </li>
+              </ul> </li>
           </ul>
         </div>
       </div>
