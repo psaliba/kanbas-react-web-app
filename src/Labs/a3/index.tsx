@@ -12,11 +12,7 @@ function Assignment3() {
     return (
       <div className="container">
         <h1>Assignment 3</h1>
-
-        <div className="asd">I am red</div>
-        <div id="qwe">I am blue</div>
-
-        {/* <ConditionalOutput/>
+        <ConditionalOutput/>
         <DynamicStyling/> 
         <Styles/>
         <Classes/>
@@ -25,7 +21,7 @@ function Assignment3() {
         <Highlight>Test content right here</Highlight>
         <Add a={3} b={4}/>
         <TodoItem/>
-        <TodoList/> */}
+        <TodoList/>
       </div>
     );
   }

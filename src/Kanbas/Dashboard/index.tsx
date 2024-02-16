@@ -20,17 +20,21 @@ function Dashboard() {
                             <div className="row row-cols-1 row-cols-md-5 g-4">
                                 {courses.map((course) => {
                                     return (
-                                        <div key={course._id} className="col" style={{ width: "300px" }}>
-                                            <div className="card"> <img src={`/images/${course.image}`} className="card-img-top" style={{maxHeight: "150px"}} alt=""/>
-                                                <div className="card-body">
-                                                    <Link className="card-title" to={`/Kanbas/Courses/${course._id}`}
-                                                        style={{textDecoration: "none", color: "navy", fontWeight: "bold"}}>
-                                                        {course.name}</Link>
-                                                    <p className="card-text">{`From ${course.startDate} to ${course.endDate}`}</p>
-                                                    <Link to={`/Kanbas/Courses/${course._id}`} className="btn btn-primary"> Go </Link>
+
+                                        <div key={course._id} className="col" style={{  width: "300px" }}>
+                                            <Link to={`/Kanbas/Courses/${course._id}`} style={{ textDecoration: "none"}}>
+                                                <div className="card"> <img src={`/images/${course.image}`} className="card-img-top" style={{ maxHeight: "150px" }} alt="" />
+                                                    <div className="card-body">
+                                                        <div className="card-title"
+                                                            style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+                                                            {course.name}</div>
+                                                        <p className="card-text">{`From ${course.startDate} to ${course.endDate}`}</p>
+                                                        <div className="btn btn-primary"> Go </div>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
+
                                     )
 
 

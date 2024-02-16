@@ -32,22 +32,22 @@ function Courses() {
             <div className="collapse show" id="navbarToggleExternalContent">
                 <div className="collapse show" id="navbarToggleCourseNav">
                     <div className="d-flex flex-row">
-                        <div className="d-flex flex-fill">
+                        <div className="d-flex flex-fill flex-grow-1">
                             <div className="d-flex flex-column flex-fill">
                                 <div className="container">
-                                <div className="d-none d-md-block  ">
-                                    <div className="row pt-2 ">
-                                        <div className="col flex-shrink ">
-                                            <FaBars color="red" size="30" />
-                                            <div className="flex-grow" />
+                                    <div className="d-none d-md-block  ">
+                                        <div className="row pt-2 ">
+                                            <div className="col flex-shrink ">
+                                                <FaBars color="red" size="30" />
+                                                <div className="flex-grow" />
+                                            </div>
+                                            <div className="col-8 flex-grow wd-status-header">
+                                                <h3 >{course?.name} {`> ${page}`}</h3>
+                                            </div>
+                                            <div className="col-3">
+                                                <button type="button" className="btn btn-light"><i className="fas fa-glasses"></i> Student View</button>
+                                            </div>
                                         </div>
-                                        <div className="col-8 flex-grow wd-status-header">
-                                            <h3 >{course?.name} {`> ${page}`}</h3>
-                                        </div>
-                                        <div className="col-3">
-                                            <button type="button" className="btn btn-light"><i className="fas fa-glasses"></i> Student View</button>
-                                        </div>
-                                    </div>
                                     </div>
                                     <hr />
                                     <div className="d-flex flex-fill ">
@@ -57,10 +57,10 @@ function Courses() {
                                         <div className="col flex-fill">
                                             <Routes>
                                                 <Route path="/" element={<Navigate to="Home" />} />
-                                                <Route path="Home" element={<Home/>}/>
+                                                <Route path="Home" element={<Home />} />
                                                 <Route path="Modules" element={<Modules />} />
                                                 <Route path="Piazza" element={<h1>Piazza</h1>} />
-                                                <Route path="Assignments" element={<Assignments/>} />
+                                                <Route path="Assignments" element={<Assignments />} />
                                                 <Route path="Assignments/:assignmentId" element={<h1>Assignment Editor</h1>} />
                                                 <Route path="Grades" element={<h1>Grades</h1>} />
                                                 <Route path="*" element={<h1> Not Linked</h1>} />
