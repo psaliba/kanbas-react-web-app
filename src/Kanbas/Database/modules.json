@@ -234,7 +234,7 @@
       ]
     },
     {
-      "_id": "M101",
+      "_id": "M401",
       "name": "Introduction to Rocket Propulsion",
       "description": "Basic principles of rocket propulsion and rocket engines.",
       "course": "6",
@@ -260,7 +260,7 @@
       ]
     },
     {
-      "_id": "M102",
+      "_id": "M402",
       "name": "Fuel and Combustion",
       "description": "Understanding rocket fuel, combustion processes, and efficiency.",
       "course": "6",
@@ -286,7 +286,7 @@
       ]
     },
     {
-      "_id": "M103",
+      "_id": "M403",
       "name": "Nozzle Design",
       "description": "Principles of rocket nozzle design and performance optimization.",
       "course": "6",
@@ -312,7 +312,7 @@
       ]
     },
     {
-      "_id": "M101",
+      "_id": "M501",
       "name": "Introduction to Rocket Propulsion",
       "description": "Basic principles of rocket propulsion and rocket engines.",
       "course": "5",
@@ -338,7 +338,7 @@
       ]
     },
     {
-      "_id": "M102",
+      "_id": "M502",
       "name": "Fuel and Combustion",
       "description": "Understanding rocket fuel, combustion processes, and efficiency.",
       "course": "5",
@@ -364,7 +364,7 @@
       ]
     },
     {
-      "_id": "M103",
+      "_id": "M503",
       "name": "Nozzle Design",
       "description": "Principles of rocket nozzle design and performance optimization.",
       "course": "5",
@@ -390,7 +390,7 @@
       ]
     },
     {
-      "_id": "M101",
+      "_id": "M601",
       "name": "Introduction to Rocket Propulsion",
       "description": "Basic principles of rocket propulsion and rocket engines.",
       "course": "4",
@@ -416,7 +416,7 @@
       ]
     },
     {
-      "_id": "M102",
+      "_id": "M602",
       "name": "Fuel and Combustion",
       "description": "Understanding rocket fuel, combustion processes, and efficiency.",
       "course": "4",
@@ -442,7 +442,7 @@
       ]
     },
     {
-      "_id": "M103",
+      "_id": "M603",
       "name": "Nozzle Design",
       "description": "Principles of rocket nozzle design and performance optimization.",
       "course": "4",
@@ -468,7 +468,7 @@
       ]
     },
     {
-      "_id": "M101",
+      "_id": "M701",
       "name": "Introduction to Rocket Propulsion",
       "description": "Basic principles of rocket propulsion and rocket engines.",
       "course": "8",
@@ -494,7 +494,7 @@
       ]
     },
     {
-      "_id": "M102",
+      "_id": "M702",
       "name": "Fuel and Combustion",
       "description": "Understanding rocket fuel, combustion processes, and efficiency.",
       "course": "8",
@@ -520,7 +520,7 @@
       ]
     },
     {
-      "_id": "M103",
+      "_id": "M703",
       "name": "Nozzle Design",
       "description": "Principles of rocket nozzle design and performance optimization.",
       "course": "8",
@@ -546,7 +546,7 @@
       ]
     },
     {
-      "_id": "M101",
+      "_id": "M801",
       "name": "Introduction to Rocket Propulsion",
       "description": "Basic principles of rocket propulsion and rocket engines.",
       "course": "7",
@@ -572,7 +572,7 @@
       ]
     },
     {
-      "_id": "M102",
+      "_id": "M802",
       "name": "Fuel and Combustion",
       "description": "Understanding rocket fuel, combustion processes, and efficiency.",
       "course": "7",
@@ -598,7 +598,7 @@
       ]
     },
     {
-      "_id": "M103",
+      "_id": "M803",
       "name": "Nozzle Design",
       "description": "Principles of rocket nozzle design and performance optimization.",
       "course": "7",
