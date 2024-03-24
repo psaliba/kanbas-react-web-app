@@ -5,11 +5,23 @@ import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
-import { Course } from "../Database";
+import { useState, useEffect } from "react";
+import { COURSES_API } from "../index";
+import axios from "axios";
 
-function Courses( { courses } :  { courses: Course[] }) {
+function Courses() {
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const [course, setCourse] = useState<any>({_id: ""});
+    const findCourseById = async () => {
+        const resp = await axios.get(`${COURSES_API}/${courseId}`);
+        if (resp.data === null) return;
+        setCourse(resp.data);
+    }
+
+    useEffect(() => {
+        findCourseById();
+    }, [courseId]);
+    
     const page = useParams()['*'];
 
     return (

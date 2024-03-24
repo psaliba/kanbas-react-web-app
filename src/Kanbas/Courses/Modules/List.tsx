@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
-import { db } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaBan, FaEdit } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,17 +8,45 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules,
 } from "./modulesReducer";
 import { KanbasState } from "../../store";
+import * as client from "./client";
 
 function ModuleList() {
+    const dispatch = useDispatch();
+
     const { courseId } = useParams();
+    useEffect(() => {
+        client.findModulesForCourse(courseId).then((modules) => {
+            dispatch(setModules(modules));
+        });
+    }, [courseId, dispatch]);
+
     const moduleList = useSelector((state: KanbasState) =>
         state.modulesReducer.modules);
     const module = useSelector((state: KanbasState) =>
         state.modulesReducer.module);
-    const dispatch = useDispatch();
+
+    const handleAddModule = () => {
+        client.createModule(courseId, module).then((newModule) => {
+            dispatch(addModule(newModule))
+
+        });
+    };
+
+    const handleDeleteModule = (moduleId: string) => {
+        client.deleteModule(moduleId).then(() => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
     const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+
+    const handleUpdateModule = async () => {
+        client.updateModule(module);
+        dispatch(updateModule(module));
+    };
 
     // const [modulesList, setModulesList] = useState(db.modules.filter((module) => module.course === courseId));
     // const [selectedModule, setSelectedModule] = useState(modulesList[0]);
@@ -53,9 +80,6 @@ function ModuleList() {
     //     });
     //     setModulesList(newModuleList);
     //   };
-
-
-
     return (
         <>
             <div className="d-flex flex-column">
@@ -84,10 +108,10 @@ function ModuleList() {
                         </div>
                         <div className="container">
                             <button type="button"
-                                onClick={() => dispatch(addModule(module))}
+                                onClick={handleAddModule}
                                 className="btn btn-primary">Add</button>
                             <button type="button"
-                                onClick={() => dispatch(updateModule(module))}
+                                onClick={handleUpdateModule}
                                 className="btn btn-secondary">Update</button>
                         </div>
 
@@ -107,13 +131,13 @@ function ModuleList() {
                                         {module.name}
                                         <span className="float-end" >
                                             <button type="button" onClick={() => dispatch(setModule(module))}>  <FaEdit color="green" /> </button>
-                                            <button type="button" style={{ padding: '0 7px' }} onClick={() => dispatch(deleteModule(module._id))}>  <FaBan color="red" /> </button>
+                                            <button type="button" style={{ padding: '0 7px' }} onClick={() => handleDeleteModule(module._id)}>  <FaBan color="red" /> </button>
                                             <FaCheckCircle className="text-success" />
                                             <FaPlusCircle className="ms-2" />
                                             <FaEllipsisV className="ms-2" />
                                         </span>
                                     </div>
-                                    {selectedModule._id === module._id && (
+                                    {selectedModule?._id === module._id && (
                                         <ul className="list-group">
                                             {module.lessons?.map((lesson: { _id: React.Key | null | undefined; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; }) => (
                                                 <li className="list-group-item" key={lesson._id}>
